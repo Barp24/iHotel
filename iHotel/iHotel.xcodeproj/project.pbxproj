@@ -43,6 +43,9 @@
 		C25B994F285E5722003CC3EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25B9942285E5722003CC3EA /* RegisterViewController.swift */; };
 		C2AA3DF2285E5C4F0051B7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AA3DF1285E5C4F0051B7EE /* Main.storyboard */; };
 		C2F5E6FA285E659600D39C62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2F5E6F9285E659600D39C62 /* GoogleService-Info.plist */; };
+		C2F5E6FF285E7BBC00D39C62 /* HotelNamesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5E6FD285E7BBC00D39C62 /* HotelNamesApi.swift */; };
+		C2F5E700285E7BBC00D39C62 /* HotelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5E6FE285E7BBC00D39C62 /* HotelName.swift */; };
+		C2F5E707285E81FC00D39C62 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C2F5E706285E81FC00D39C62 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,8 @@
 		C2AA3DF1285E5C4F0051B7EE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C2F5E6F7285E647600D39C62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2F5E6F9285E659600D39C62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2F5E6FD285E7BBC00D39C62 /* HotelNamesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelNamesApi.swift; sourceTree = "<group>"; };
+		C2F5E6FE285E7BBC00D39C62 /* HotelName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C252D6DD285E3A97003F0280 /* Cosmos in Frameworks */,
+				C2F5E707285E81FC00D39C62 /* Alamofire in Frameworks */,
 				C252D6D8285E3759003F0280 /* Kingfisher in Frameworks */,
 				C252D6E0285E456A003F0280 /* FirebaseAnalytics in Frameworks */,
 				C252D6E4285E456A003F0280 /* FirebaseFirestore in Frameworks */,
@@ -153,6 +159,7 @@
 		C252D683285E2D8C003F0280 /* iHotel */ = {
 			isa = PBXGroup;
 			children = (
+				C2F5E6FC285E7BBC00D39C62 /* API */,
 				C25B9926285E56D0003CC3EA /* Model */,
 				C252D684285E2D8D003F0280 /* AppDelegate.swift */,
 				C252D686285E2D8D003F0280 /* SceneDelegate.swift */,
@@ -210,6 +217,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C2F5E6FC285E7BBC00D39C62 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C2F5E6FD285E7BBC00D39C62 /* HotelNamesApi.swift */,
+				C2F5E6FE285E7BBC00D39C62 /* HotelName.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +249,7 @@
 				C252D6E1285E456A003F0280 /* FirebaseAuth */,
 				C252D6E3285E456A003F0280 /* FirebaseFirestore */,
 				C252D6E5285E456A003F0280 /* FirebaseStorage */,
+				C2F5E706285E81FC00D39C62 /* Alamofire */,
 			);
 			productName = iHotel;
 			productReference = C252D681285E2D8C003F0280 /* iHotel.app */;
@@ -310,6 +327,9 @@
 				C252D6D6285E3759003F0280 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				C252D6DB285E3A97003F0280 /* XCRemoteSwiftPackageReference "Cosmos" */,
 				C252D6DE285E456A003F0280 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C2F5E701285E7C9E00D39C62 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C2F5E702285E7D2100D39C62 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C2F5E705285E81FC00D39C62 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = C252D682285E2D8C003F0280 /* Products */;
 			projectDirPath = "";
@@ -362,6 +382,7 @@
 				C252D689285E2D8D003F0280 /* ViewController.swift in Sources */,
 				C25B9934285E56D0003CC3EA /* User+CoreDataClass.swift in Sources */,
 				C252D685285E2D8D003F0280 /* AppDelegate.swift in Sources */,
+				C2F5E700285E7BBC00D39C62 /* HotelName.swift in Sources */,
 				C25B994D285E5722003CC3EA /* HomeViewController.swift in Sources */,
 				C25B9943285E5722003CC3EA /* ProfileViewController.swift in Sources */,
 				C25B9949285E5722003CC3EA /* EditProfileViewController.swift in Sources */,
@@ -376,6 +397,7 @@
 				C25B9948285E5722003CC3EA /* EditReviewViewController.swift in Sources */,
 				C25B9931285E56D0003CC3EA /* ReviewModel.xcdatamodeld in Sources */,
 				C25B994E285E5722003CC3EA /* ProfileMenuTableViewController.swift in Sources */,
+				C2F5E6FF285E7BBC00D39C62 /* HotelNamesApi.swift in Sources */,
 				C25B9944285E5722003CC3EA /* LoginViewController.swift in Sources */,
 				C25B9935285E56D0003CC3EA /* Review+CoreDataProperties.swift in Sources */,
 			);
@@ -731,6 +753,30 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		C2F5E701285E7C9E00D39C62 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C2F5E702285E7D2100D39C62 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C2F5E705285E81FC00D39C62 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -763,6 +809,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C252D6DE285E456A003F0280 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		C2F5E706285E81FC00D39C62 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2F5E701285E7C9E00D39C62 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
