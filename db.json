@@ -1,12 +1,14 @@
 {
-    "hotels":[
-        {
-          "id": "1",
-          "name": "Montiphiory Hotel"
-        },
-        {
-          "id": "2",
-          "name": "Crown Plaza Hotel"
-        }
-    ]
+    "hotels":{
+        "results": [
+            {
+            "id": "1",
+            "name": "Montiphiory Hotel"
+            },
+            {
+            "id": "2",
+            "name": "Crown Plaza Hotel"
+            }
+        ]
+    }
 }
