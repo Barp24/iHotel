@@ -102,6 +102,7 @@
 		C2F5E6F9285E659600D39C62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2F5E6FD285E7BBC00D39C62 /* HotelNamesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelNamesApi.swift; sourceTree = "<group>"; };
 		C2F5E6FE285E7BBC00D39C62 /* HotelName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelName.swift; sourceTree = "<group>"; };
+		C2F5E708285FA2E900D39C62 /* db.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +140,7 @@
 		C252D678285E2D8C003F0280 = {
 			isa = PBXGroup;
 			children = (
+				C2F5E708285FA2E900D39C62 /* db.json */,
 				C252D683285E2D8C003F0280 /* iHotel */,
 				C252D69D285E2D8E003F0280 /* iHotelTests */,
 				C252D6A7285E2D8E003F0280 /* iHotelUITests */,
