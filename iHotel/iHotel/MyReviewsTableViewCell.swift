@@ -11,7 +11,6 @@ import Cosmos
 class MyReviewsTableViewCell: UITableViewCell {
     @IBOutlet weak var hotelImage: UIImageView!
     @IBOutlet weak var HotelNameText: UILabel!
-    @IBOutlet weak var releaseYearText: UILabel!
     @IBOutlet weak var genreText: UILabel!
     @IBOutlet weak var ratingStars: CosmosView!
     

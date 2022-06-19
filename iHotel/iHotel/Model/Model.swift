@@ -32,7 +32,6 @@ class Model {
     let modelFirebase = ModelFirebase()
     let usersLastUpdate = "UsersLastUpdateDate"
     let reviewsLastUpdate = "ReviewsLastUpdateDate"
-    var yearsData = Array(1878...2022)
     var genreData = ["Comedy", "Drama", "Action", "Fantasy", "Romance"]
     
     public let notificationReviewsList = NotificationGeneral("notificationReviewsList")

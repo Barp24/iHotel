@@ -12,7 +12,6 @@ import Cosmos
 class EditReviewViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet weak var hotelImage: UIImageView!
     @IBOutlet weak var hotelNameText: UITextField!
-    @IBOutlet weak var releaseYearText: UITextField!
     @IBOutlet weak var genreText: UITextField!
     @IBOutlet weak var ratingStars: CosmosView!
     @IBOutlet weak var ReviewText: UITextView!
@@ -20,11 +19,8 @@ class EditReviewViewController: UIViewController, UIImagePickerControllerDelegat
     var reviewId: String = ""
     var review: Review?
     var selectedImage: UIImage?
-    var selectedYear: Int64 = 0
     var selectedGenre: String?
-    let YEAR_TAG = 0
     let GENRE_TAG = 1
-    var yearsData = [Int]()
     var genreData = [String]()
     
     @IBAction func saveClicked(_ sender: Any) {
@@ -32,7 +28,6 @@ class EditReviewViewController: UIViewController, UIImagePickerControllerDelegat
             loading.startAnimating()
             
             review?.hotelName = hotelNameText.text!
-            review?.releaseYear = selectedYear
             review?.genre = selectedGenre
             review?.rating = Int64(ratingStars.rating)
             review?.review = ReviewText.text!
@@ -57,7 +52,6 @@ class EditReviewViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        yearsData = Model.instance.yearsData
         genreData = Model.instance.genreData
         
         // Set hotel image clickable
@@ -71,15 +65,12 @@ class EditReviewViewController: UIViewController, UIImagePickerControllerDelegat
         ReviewText!.clipsToBounds = true
         
         ratingStars.settings.fillMode = .full
-        releaseYearText.delegate = self
         genreText.delegate = self
         
         if let selectedReview = Model.instance.getReview(byId: reviewId) {
             review = selectedReview
-            selectedYear = review!.releaseYear
             selectedGenre = review?.genre
             hotelNameText.text = review?.hotelName!
-            releaseYearText.text = String(review!.releaseYear)
             genreText.text = review?.genre
             ratingStars.rating = Double(review!.rating)
             ReviewText.text = review?.review
@@ -150,54 +141,39 @@ extension EditReviewViewController: UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == YEAR_TAG {
-            return yearsData.count
-        }
-        else {
+        if pickerView.tag == GENRE_TAG {
             return genreData.count
+        } else {
+            return 0
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == YEAR_TAG {
-            return String(yearsData[row])
-        }
-        else {
+        if pickerView.tag == GENRE_TAG {
             return genreData[row]
+        } else {
+            return ""
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == YEAR_TAG {
-            selectedYear = Int64(yearsData[row])
-            releaseYearText.text = String(selectedYear)
-        }
-        else {
+        if pickerView.tag == GENRE_TAG {
             selectedGenre = genreData[row]
             genreText.text = selectedGenre
         }
     }
     
     func createPickerViews() {
-        let yearPickerView = UIPickerView()
-        yearPickerView.delegate = self
-        yearPickerView.tag = YEAR_TAG
-        yearPickerView.selectRow(yearsData.firstIndex(of: Int(review!.releaseYear))!, inComponent: 0, animated: false)
-        
         let genrePickerView = UIPickerView()
         genrePickerView.delegate = self
         genrePickerView.tag = GENRE_TAG
         genrePickerView.selectRow(genreData.firstIndex(of: (review?.genre)!)!, inComponent: 0, animated: false)
-        
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
         toolBar.setItems([button], animated: true)
         toolBar.isUserInteractionEnabled = true
-        
-        releaseYearText.inputView = yearPickerView
-        releaseYearText.inputAccessoryView = toolBar
         
         genreText.inputView = genrePickerView
         genreText.inputAccessoryView = toolBar

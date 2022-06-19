@@ -22,7 +22,6 @@ extension Review {
     @NSManaged public var lastUpdated: Int64
     @NSManaged public var hotelName: String?
     @NSManaged public var rating: Int64
-    @NSManaged public var releaseYear: Int64
     @NSManaged public var review: String?
     @NSManaged public var userId: String?
     @NSManaged public var wasDeleted: Bool
