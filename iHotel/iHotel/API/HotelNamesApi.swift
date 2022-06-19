@@ -10,37 +10,18 @@ import Alamofire
 
 class HotelNamesApi{
     
-//    static func getFilms(onComplete:@escaping (HotelNames?)->Void){
-//        AF.request("https://swapi.dev/api/films").responseDecodable(of:HotelNames.self){ response in
-//            switch response.result{
-//            case .success(let data):
-//                print ("success")
-//                onComplete(data)
-//            case .failure(let error):
-//                print("error : \(error)")
-//                onComplete(nil)
-//            }
-//        }
-//    }
-    
-    static func getHotelNames(onComplete:@escaping ([HotelName])->Void){
-        let hotelNamesApiUrl = "adada"
-        var hotelNames = [HotelName]()
-        let dispatchGroup = DispatchGroup()
-        for index in 1...3 {
-            dispatchGroup.enter()
-            AF.request(hotelNamesApiUrl + String(index)).responseDecodable(of:HotelName.self){ response in
-                switch response.result{
-                case .success(let hotel):
-                    hotelNames.append(hotel)
-                case .failure(let error):
-                    print("error : \(error)")
-                }
-                dispatchGroup.leave()
+    static func getHotelNames(onComplete:@escaping (HotelNames?)->Void){
+        let hotelNamesApiUrl = "https://my-json-server.typicode.com/Barp24/iHotel/hotels"
+        AF.request(hotelNamesApiUrl).responseDecodable(of:HotelNames.self){ response in
+            switch response.result{
+            case .success(let data):
+                print(data);
+                print ("success")
+                onComplete(data)
+            case .failure(let error):
+                print("error : \(error)")
+                onComplete(nil)
             }
-        }
-        dispatchGroup.notify(queue: .main){
-            onComplete(hotelNames)
         }
     }
 }

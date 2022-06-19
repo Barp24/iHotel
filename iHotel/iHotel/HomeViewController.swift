@@ -40,6 +40,14 @@ class HomeViewController: UIViewController {
                 self.refreshControl.endRefreshing()
             }
         }
+        
+        HotelNamesApi.getHotelNames { hotelNames in
+            if !(hotelNames?.all.isEmpty)! {
+                Model.instance.genreData = (hotelNames?.all.map({ Wrapped in
+                    Wrapped.name
+                }))!
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -8,21 +8,19 @@
 import Foundation
 
 struct HotelName: Decodable {
-    let id: Int
-    let title: String
+    let id: String
+    let name: String
     
     enum CodingKeys: String, CodingKey {
-        case id = "_id"
-        case title
+        case id = "id"
+        case name = "name"
     }
 }
 
 struct HotelNames: Decodable {
-    let count: Int
     let all: [HotelName]
     
     enum CodingKeys: String, CodingKey {
-        case count
         case all = "results"
     }
 }
