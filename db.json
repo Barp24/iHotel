@@ -9,4 +9,7 @@
           "name": "Crown Plaza Hotel"
         }
     ]
+    "profile": {
+        "name": "hotels"
+    }
 }
