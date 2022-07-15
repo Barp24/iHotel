@@ -1,13 +1,13 @@
 {
-    "hotels":{
+    "cities":{
         "results": [
             {
             "id": "1",
-            "name": "Montiphiory Hotel"
+            "name": "Haifa"
             },
             {
             "id": "2",
-            "name": "Crown Plaza Hotel"
+            "name": "Tel Aviv-Yafo"
             }
         ]
     }
