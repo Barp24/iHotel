@@ -1,5 +1,5 @@
 //
-//  HotelName.swift
+//  City.swift
 //  iHotel
 //
 //  Created by admin on 08/06/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HotelName: Decodable {
+struct City: Decodable {
     let id: String
     let name: String
     
@@ -17,8 +17,8 @@ struct HotelName: Decodable {
     }
 }
 
-struct HotelNames: Decodable {
-    let all: [HotelName]
+struct Cities: Decodable {
+    let all: [City]
     
     enum CodingKeys: String, CodingKey {
         case all = "results"

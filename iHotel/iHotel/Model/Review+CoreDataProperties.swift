@@ -16,7 +16,7 @@ extension Review {
         return NSFetchRequest<Review>(entityName: "Review")
     }
 
-    @NSManaged public var genre: String?
+    @NSManaged public var city: String?
     @NSManaged public var id: String?
     @NSManaged public var imageUrl: String?
     @NSManaged public var lastUpdated: Int64

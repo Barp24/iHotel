@@ -15,7 +15,7 @@ class ReviewDetailsViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var hotelTitle: UILabel!
-    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var city: UILabel!
     @IBOutlet weak var review: UITextView!
     @IBOutlet weak var ratingStars: CosmosView!
     
@@ -33,7 +33,7 @@ class ReviewDetailsViewController: UIViewController {
             userImage.clipsToBounds = true
         }
         hotelTitle.text = reviewObejct!.hotelName
-        genre.text = reviewObejct!.genre
+        city.text = reviewObejct!.city
         posterImage.kf.setImage(with: URL(string: reviewObejct!.imageUrl!),placeholder: UIImage(named: "Default Avatar"))
         review.text = reviewObejct!.review
         ratingStars.rating = Double(reviewObejct!.rating)

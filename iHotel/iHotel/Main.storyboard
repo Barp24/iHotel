@@ -80,8 +80,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-Yj-ta5">
-                                <rect key="frame" x="299" y="334.5" width="91" height="38.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADr-Yj-ta5" userLabel="City Text">
+                                <rect key="frame" x="320.5" y="334.5" width="69.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -117,7 +117,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="genreText" destination="ADr-Yj-ta5" id="a39-Md-Jip"/>
+                        <outlet property="cityText" destination="ADr-Yj-ta5" id="GGa-lO-1f6"/>
                         <outlet property="hotelName" destination="0Gw-y5-PvB" id="1e8-wH-fJK"/>
                         <outlet property="loading" destination="kSs-ok-vr5" id="COJ-TW-ncc"/>
                         <outlet property="ratingStars" destination="43X-yS-7Sa" id="yls-Ak-c8v"/>
@@ -168,7 +168,7 @@
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" systemColor="labelColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYA-F4-0dm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYA-F4-0dm" userLabel="City">
                                                     <rect key="frame" x="155" y="147" width="215" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -215,7 +215,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="genre" destination="BYA-F4-0dm" id="qas-SH-Y4P"/>
+                                            <outlet property="city" destination="BYA-F4-0dm" id="qNV-Vp-rpV"/>
                                             <outlet property="hotelTitle" destination="9lh-kV-qO7" id="J49-eK-dTI"/>
                                             <outlet property="posterImage" destination="sXg-ol-41V" id="YLH-bg-4ea"/>
                                             <outlet property="ratingStars" destination="CmD-QR-UVV" id="fCQ-Qp-jcU"/>
@@ -284,7 +284,7 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="labelColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpS-hr-3Qw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpS-hr-3Qw">
                                 <rect key="frame" x="151" y="164" width="239" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -353,7 +353,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Review Details" id="gLD-dB-ihG"/>
                     <connections>
-                        <outlet property="genre" destination="hpS-hr-3Qw" id="88I-I0-5Z0"/>
+                        <outlet property="city" destination="hpS-hr-3Qw" id="Ked-SC-m8Y"/>
                         <outlet property="hotelTitle" destination="mAQ-lL-yJb" id="i10-RO-RUu"/>
                         <outlet property="posterImage" destination="avw-LS-dhn" id="aXs-Zc-Y6w"/>
                         <outlet property="ratingStars" destination="CVH-qD-Rv9" id="u7Q-Tx-Q2b"/>
@@ -679,7 +679,7 @@
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" systemColor="labelColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z24-xp-5dk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z24-xp-5dk" userLabel="City Text">
                                                     <rect key="frame" x="155" y="104" width="239" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -715,7 +715,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="HotelNameText" destination="2dS-25-TIF" id="45G-yg-ULZ"/>
-                                            <outlet property="genreText" destination="z24-xp-5dk" id="Syy-Dh-FLt"/>
+                                            <outlet property="cityText" destination="z24-xp-5dk" id="BYe-31-HUE"/>
                                             <outlet property="hotelImage" destination="f20-Z3-HMh" id="Xhn-0W-7Dv"/>
                                             <outlet property="ratingStars" destination="p6e-mg-PCh" id="xmd-QN-cgS"/>
                                         </connections>
@@ -802,8 +802,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PeW-fL-bA0">
-                                <rect key="frame" x="299" y="387.5" width="91" height="38.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PeW-fL-bA0">
+                                <rect key="frame" x="320.5" y="387.5" width="69.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -840,7 +840,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ReviewText" destination="ub8-JA-Ulb" id="9vG-aX-Djv"/>
-                        <outlet property="genreText" destination="PeW-fL-bA0" id="Xkb-sT-kHR"/>
+                        <outlet property="cityText" destination="PeW-fL-bA0" id="ZgH-WL-k89"/>
                         <outlet property="hotelImage" destination="3uC-6j-gEa" id="0cW-Qe-dg7"/>
                         <outlet property="hotelNameText" destination="HCr-RX-nHF" id="SBD-oV-VFg"/>
                         <outlet property="loading" destination="SAw-vc-feC" id="gaK-mH-VgO"/>

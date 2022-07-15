@@ -14,7 +14,7 @@ class ReviewsTableViewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var hotelTitle: UILabel!
-    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var city: UILabel!
     @IBOutlet weak var ratingStars: CosmosView!
     override func awakeFromNib() {
         super.awakeFromNib()

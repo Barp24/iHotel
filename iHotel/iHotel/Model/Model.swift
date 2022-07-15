@@ -27,12 +27,11 @@ class NotificationGeneral{
 }
 
 class Model {
-    
     static let instance = Model()
     let modelFirebase = ModelFirebase()
     let usersLastUpdate = "UsersLastUpdateDate"
     let reviewsLastUpdate = "ReviewsLastUpdateDate"
-    var genreData = ["Comedy", "Drama", "Action", "Fantasy", "Romance"]
+    var cities = [""]
     
     public let notificationReviewsList = NotificationGeneral("notificationReviewsList")
     

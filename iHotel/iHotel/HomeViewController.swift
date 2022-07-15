@@ -18,9 +18,17 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        CitiesApi.getCities { cities in
+            if !(cities?.all.isEmpty)! {
+                Model.instance.cities = (cities?.all.map({ Wrapped in
+                    Wrapped.name
+                }))!
+            }
+        }
+        
         reviewsTableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action:#selector(refresh) , for: .valueChanged)
-        
         reloadData()
         Model.instance.notificationReviewsList.observe {
             self.reloadData()
@@ -38,14 +46,6 @@ class HomeViewController: UIViewController {
                 self.data = reviews
                 self.reviewsTableView.reloadData()
                 self.refreshControl.endRefreshing()
-            }
-        }
-        
-        HotelNamesApi.getHotelNames { hotelNames in
-            if !(hotelNames?.all.isEmpty)! {
-                Model.instance.genreData = (hotelNames?.all.map({ Wrapped in
-                    Wrapped.name
-                }))!
             }
         }
     }
@@ -73,7 +73,7 @@ extension HomeViewController: UITableViewDataSource {
         
         let review = data[indexPath.row]
         cell.hotelTitle.text = review.hotelName
-        cell.genre.text = review.genre
+        cell.city.text = review.city
         cell.posterImage.kf.setImage(with: URL(string: review.imageUrl!),placeholder: UIImage(named: "Default Avatar"))
         cell.ratingStars.rating = Double(review.rating)
         cell.ratingStars.settings.updateOnTouch = false

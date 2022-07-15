@@ -13,12 +13,12 @@ import Firebase
 
 @objc(Review)
 public class Review: NSManagedObject {
-    static func createReview(id:String, hotelName: String, genre: String, imageUrl: String, rating: Int64, review: String, userId:String , lastUpdated: Int64)-> Review {
+    static func createReview(id:String, hotelName: String, city: String, imageUrl: String, rating: Int64, review: String, userId:String , lastUpdated: Int64)-> Review {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let currReview = Review(context: context)
         currReview.id = id
         currReview.hotelName = hotelName
-        currReview.genre = genre
+        currReview.city = city
         currReview.review = review
         currReview.imageUrl = imageUrl
         currReview.rating = rating
@@ -34,7 +34,7 @@ public class Review: NSManagedObject {
         let review = Review(context: context)
         review.id = json["id"] as? String
         review.hotelName = json["hotelName"] as? String
-        review.genre = json["genre"] as? String
+        review.city = json["city"] as? String
         review.review = json["review"] as? String
         review.rating = (json["rating"] as? Int64)!
         review.userId = json["userId"] as? String
@@ -56,7 +56,7 @@ public class Review: NSManagedObject {
         var json = [String:Any]()
         json["id"] = id!
         json["hotelName"] = hotelName!
-        json["genre"] = genre!
+        json["city"] = city!
         json["review"] = review!
         json["rating"] = rating
         json["userId"] = userId!

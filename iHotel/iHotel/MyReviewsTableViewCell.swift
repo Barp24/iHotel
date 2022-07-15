@@ -11,7 +11,7 @@ import Cosmos
 class MyReviewsTableViewCell: UITableViewCell {
     @IBOutlet weak var hotelImage: UIImageView!
     @IBOutlet weak var HotelNameText: UILabel!
-    @IBOutlet weak var genreText: UILabel!
+    @IBOutlet weak var cityText: UILabel!
     @IBOutlet weak var ratingStars: CosmosView!
     
     override func awakeFromNib() {

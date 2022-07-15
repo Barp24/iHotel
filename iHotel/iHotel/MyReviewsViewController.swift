@@ -104,7 +104,7 @@ extension MyReviewsViewController: UITableViewDataSource {
         
         let review = data[indexPath.row]
         cell.HotelNameText.text = review.hotelName
-        cell.genreText.text = review.genre
+        cell.cityText.text = review.city
         cell.ratingStars.rating = Double(review.rating)
         cell.ratingStars.settings.updateOnTouch = false
         cell.hotelImage.kf.setImage(with: URL(string: (review.imageUrl)!), placeholder: UIImage(named: "Default Avatar"))
