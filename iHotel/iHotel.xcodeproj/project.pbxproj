@@ -41,8 +41,8 @@
 		C25B994D285E5722003CC3EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25B9940285E5722003CC3EA /* HomeViewController.swift */; };
 		C25B994E285E5722003CC3EA /* ProfileMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25B9941285E5722003CC3EA /* ProfileMenuTableViewController.swift */; };
 		C25B994F285E5722003CC3EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25B9942285E5722003CC3EA /* RegisterViewController.swift */; };
+		C2709D4A28B533570050AB9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2709D4928B533570050AB9B /* GoogleService-Info.plist */; };
 		C2AA3DF2285E5C4F0051B7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AA3DF1285E5C4F0051B7EE /* Main.storyboard */; };
-		C2F5E6FA285E659600D39C62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2F5E6F9285E659600D39C62 /* GoogleService-Info.plist */; };
 		C2F5E6FF285E7BBC00D39C62 /* CitiesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5E6FD285E7BBC00D39C62 /* CitiesApi.swift */; };
 		C2F5E700285E7BBC00D39C62 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5E6FE285E7BBC00D39C62 /* City.swift */; };
 		C2F5E707285E81FC00D39C62 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C2F5E706285E81FC00D39C62 /* Alamofire */; };
@@ -97,9 +97,9 @@
 		C25B9940285E5722003CC3EA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C25B9941285E5722003CC3EA /* ProfileMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMenuTableViewController.swift; sourceTree = "<group>"; };
 		C25B9942285E5722003CC3EA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C2709D4928B533570050AB9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2AA3DF1285E5C4F0051B7EE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C2F5E6F7285E647600D39C62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2F5E6F9285E659600D39C62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2F5E6FD285E7BBC00D39C62 /* CitiesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesApi.swift; sourceTree = "<group>"; };
 		C2F5E6FE285E7BBC00D39C62 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,9 +167,9 @@
 				C2AA3DF1285E5C4F0051B7EE /* Main.storyboard */,
 				C25B993C285E5722003CC3EA /* EditProfileViewController.swift */,
 				C25B993B285E5722003CC3EA /* EditReviewViewController.swift */,
+				C2709D4928B533570050AB9B /* GoogleService-Info.plist */,
 				C25B9940285E5722003CC3EA /* HomeViewController.swift */,
 				C25B9937285E5721003CC3EA /* LoginViewController.swift */,
-				C2F5E6F9285E659600D39C62 /* GoogleService-Info.plist */,
 				C25B993F285E5722003CC3EA /* MyReviewsTableViewCell.swift */,
 				C25B993E285E5722003CC3EA /* MyReviewsViewController.swift */,
 				C25B993D285E5722003CC3EA /* NewReviewViewController.swift */,
@@ -348,8 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C252D694285E2D8E003F0280 /* LaunchScreen.storyboard in Resources */,
+				C2709D4A28B533570050AB9B /* GoogleService-Info.plist in Resources */,
 				C252D691285E2D8E003F0280 /* Assets.xcassets in Resources */,
-				C2F5E6FA285E659600D39C62 /* GoogleService-Info.plist in Resources */,
 				C2AA3DF2285E5C4F0051B7EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

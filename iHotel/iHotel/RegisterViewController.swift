@@ -21,6 +21,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
             loading.startAnimating()
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { authResult, error in
                 if error != nil {
+                    print(error)
                     self.loading.stopAnimating()
 //                    if [AuthErrorCode.networkError, AuthErrorCode.invalidEmail, AuthErrorCode.emailAlreadyInUse].contains(AuthErrorCode(rawValue: error._code)){
 //                        self.displayAlert(message: error.localizedDescription)

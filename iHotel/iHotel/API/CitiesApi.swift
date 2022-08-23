@@ -10,6 +10,7 @@ import Alamofire
 
 class CitiesApi{
     
+    // Fetch cities
     static func getCities(onComplete:@escaping (Cities?)->Void){
         let apiUrl = "https://my-json-server.typicode.com/Barp24/iHotel/cities"
         AF.request(apiUrl).responseDecodable(of:Cities.self){ response in
