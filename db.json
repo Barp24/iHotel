@@ -8,6 +8,26 @@
             {
             "id": "2",
             "name": "Tel Aviv-Yafo"
+            },
+            {
+            "id": "3",
+            "name": "Jerusalem"
+            },
+            {
+            "id": "4",
+            "name": "Herzeliya"
+            },
+            {
+            "id": "5",
+            "name": "Rishon Le-Ziyon"
+            },
+            {
+            "id": "6",
+            "name": "Ashdod"
+            },
+            {
+            "id": "7",
+            "name": "Rehovot"
             }
         ]
     }
