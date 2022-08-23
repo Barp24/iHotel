@@ -45,8 +45,8 @@
                                     <constraint firstAttribute="height" constant="200" id="Ob8-za-t1D"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-ok-vr5">
-                                <rect key="frame" x="182" y="723.5" width="50" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-ok-vr5">
+                                <rect key="frame" x="182" y="777.5" width="37" height="37"/>
                                 <color key="color" name="AccentColor"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43X-yS-7Sa" customClass="CosmosView" customModule="Cosmos">
